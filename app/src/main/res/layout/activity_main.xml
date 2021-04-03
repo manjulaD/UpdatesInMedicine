@@ -6,33 +6,55 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/btnRediff"
+        android:id="@+id/btnJournals"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="Journals" />
+        android:layout_marginBottom="40dp"
+        android:background="@color/b2"
+        android:text="Journals"
+        android:textSize="36sp" />
 
     <Button
-        android:id="@+id/btnCinemaBlend"
+        android:id="@+id/btnNews"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@color/colorAccent"
+        android:text="Medical News"
+        android:textSize="36sp" />
+
+    <Button
+        android:id="@+id/buttonAbout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/card"
+        android:onClick="onClick"
         android:text="About" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginStart="20dp"
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        android:text="Medical News" />
+        android:layout_marginBottom="40dp"
+        android:background="@color/bbbbb"
+        android:onClick="onClick"
+        android:text="Contact Us" />
 
 </LinearLayout>

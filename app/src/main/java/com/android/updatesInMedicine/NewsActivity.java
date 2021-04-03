@@ -34,13 +34,14 @@ public class NewsActivity extends AppCompatActivity {
         rssLinks.add("https://www.medscape.com/cx/rssfeeds/2700.xml");
         rssLinks.add("https://www.who.int/rss-feeds/news-english.xml");
         rssLinks.add("https://www.fda.gov/about-fda/contact-fda/stay-informed/rss-feeds/press-releases/rss.xml");
-        rssLinks.add("https://www.medicinenet.com/rss/dailyhealth.xml");
+      //  rssLinks.add("https://www.medicinenet.com/rss/dailyhealth.xml");
+        rssLinks.add("https://tools.cdc.gov/api/v2/resources/media/132608.rss");
 
 
         type.add("Medscape News");
         type.add("WHO News");
         type.add("FDA Press Release");
-        type.add("Medicine Net");
+        type.add("CDC News");
 
 
     }

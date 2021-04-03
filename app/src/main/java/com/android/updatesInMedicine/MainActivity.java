@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Button btnRediff = findViewById(R.id.btnRediff);
-        Button btnCinemaBlend = findViewById(R.id.btnCinemaBlend);
-        Button btnJournal = findViewById(R.id.button);
+        setTitle("Updates in Medicine");
+        Button btnRediff = findViewById(R.id.btnJournals);
+        Button btnCinemaBlend = findViewById(R.id.btnNews);
+        Button btnJournal = findViewById(R.id.buttonAbout);
         btnRediff.setOnClickListener(this);
         btnCinemaBlend.setOnClickListener(this);
 
@@ -33,15 +33,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnRediff:
+            case R.id.btnJournals:
                 startActivity(new Intent(MainActivity.this, JournalActivity.class).putExtra("rssLink", rssLinks.get(0)));
                 break;
 
-            case R.id.btnCinemaBlend:
+            case R.id.btnNews:
                 startActivity(new Intent(MainActivity.this, NewsActivity.class).putExtra("rssLink", rssLinks.get(1)));
                 break;
 
-            case R.id.button:
+            case R.id.buttonAbout:
+                startActivity(new Intent(MainActivity.this, AboutActivity.class).putExtra("rssLink", rssLinks.get(1)));
+                break;
+
+            case R.id.button2:
                 startActivity(new Intent(MainActivity.this, JournalActivity.class).putExtra("rssLink", rssLinks.get(1)));
                 break;
         }
