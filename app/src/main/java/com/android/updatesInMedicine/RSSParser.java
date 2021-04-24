@@ -89,6 +89,9 @@ public class RSSParser {
             HttpEntity httpEntity = httpResponse.getEntity();
             xml = EntityUtils.toString(httpEntity);
             int index=xml.indexOf("<?xml");
+            if( index <0){
+                index=xml.indexOf("<rss");
+            }
             xml=xml.substring(index);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();

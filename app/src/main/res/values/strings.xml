@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">AndroidRSSFeedTutorial</string>
+    <string name="title_activity_journal_list">JournalListActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="about">Main purpose of this app is sharing new medical knowledge to help Continuous Medical Education of Medical professionals.
+        Here you can access latest articles from top medical journals in your field. We have included journals with highest impact factor in each field.
+
+        \n \n Please give your valuable opinion via an email for us to improve.
+
+        \n \n Share the app among colleges to stay updated.</string>
 </resources>
