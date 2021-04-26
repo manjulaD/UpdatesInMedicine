@@ -15,7 +15,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginRight="20dp"
-        card_view:cardBackgroundColor="@color/card"
+        card_view:cardBackgroundColor="@color/design_default_color_background"
         card_view:cardCornerRadius="4dp">
 
         <RelativeLayout
@@ -34,7 +34,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:ellipsize="end"
-               
+
                 android:paddingBottom="1dip"
                 android:textColor="#2196F3"
                 android:textSize="15sp"

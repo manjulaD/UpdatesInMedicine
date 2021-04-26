@@ -1,6 +1,8 @@
 package com.android.updatesInMedicine;
 
+import android.app.Application;
 import android.util.Log;
+import android.widget.Toast;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -91,6 +93,14 @@ public class RSSParser {
             int index=xml.indexOf("<?xml");
             if( index <0){
                 index=xml.indexOf("<rss");
+            }
+            if( index <0){
+                index=xml.indexOf("<rdf");
+            }
+
+            if(xml.startsWith("<html") || index <0){
+
+               return null;
             }
             xml=xml.substring(index);
         } catch (UnsupportedEncodingException e) {

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AndroidRSSFeedTutorial</string>
+    <string name="app_name">Updates In Medicine</string>
     <string name="title_activity_journal_list">JournalListActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

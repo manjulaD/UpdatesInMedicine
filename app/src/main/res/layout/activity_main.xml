@@ -5,8 +5,18 @@
     android:gravity="center"
     android:orientation="vertical">
 
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/my_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="?attr/actionBarSize"-->
+<!--        android:background="?attr/colorPrimary"-->
+<!--        android:elevation="4dp"-->
+
+<!--        android:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+<!--        android:theme="@style/ThemeOverlay.AppCompat.ActionBar" />-->
+
     <Button
-        android:id="@+id/btnJournals"
+        android:id="@+id/topJournals"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginStart="20dp"
@@ -15,8 +25,26 @@
         android:layout_marginRight="20dp"
         android:layout_marginBottom="40dp"
         android:background="@color/b2"
-        android:text="Journals"
-        android:textSize="36sp" />
+        android:text="Top Journals"
+        android:textColor="?android:attr/colorForegroundInverse"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/journalsBySubject"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="40dp"
+        android:background="@android:color/holo_purple"
+        android:clickable="true"
+        android:onClick="onClick"
+        android:padding="5dp"
+        android:text="Journals by Subjects"
+        android:textColor="?android:attr/colorForegroundInverse"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/btnNews"
@@ -29,7 +57,8 @@
         android:layout_marginBottom="40dp"
         android:background="@color/colorAccent"
         android:text="Medical News"
-        android:textSize="36sp" />
+        android:textColor="?android:attr/colorForegroundInverse"
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/buttonAbout"
@@ -45,7 +74,7 @@
         android:text="About" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/contact_us_btn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginStart="20dp"

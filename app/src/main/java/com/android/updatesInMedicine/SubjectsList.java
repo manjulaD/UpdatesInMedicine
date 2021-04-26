@@ -31,6 +31,7 @@ public class SubjectsList extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subjects_list);
+        setTitle("Journals by Subjects");
 
         new SubjectsList.LoadRSSFeedItems().execute("");
 

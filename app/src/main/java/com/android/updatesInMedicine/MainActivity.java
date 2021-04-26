@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle("Updates in Medicine");
-        Button btnRediff = findViewById(R.id.btnJournals);
+        Button btnRediff = findViewById(R.id.topJournals);
         Button btnCinemaBlend = findViewById(R.id.btnNews);
         Button btnJournal = findViewById(R.id.buttonAbout);
         btnRediff.setOnClickListener(this);
@@ -172,7 +172,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.btnJournals:
+            case R.id.topJournals:
                 startActivity(new Intent(MainActivity.this, JournalActivity.class).putExtra("rssLink", rssLinks.get(0)));
                 break;
 
@@ -184,9 +184,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(MainActivity.this, AboutActivity.class).putExtra("rssLink", rssLinks.get(1)));
                 break;
 
-            case R.id.button2:
-                startActivity(new Intent(MainActivity.this, JournalActivity.class).putExtra("rssLink", rssLinks.get(1)));
+            case R.id.contact_us_btn:
+                startActivity(new Intent(MainActivity.this, Contact_us.class).putExtra("rssLink", rssLinks.get(1)));
                 break;
+
+            case R.id.journalsBySubject:
+                startActivity(new Intent(MainActivity.this, SubjectsList.class).putExtra("rssLink", rssLinks.get(1)));
+                break;
+
+
         }
     }
 

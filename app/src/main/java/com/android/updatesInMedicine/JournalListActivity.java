@@ -29,7 +29,9 @@ public class JournalListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_journal_list);
 
+
         final String subject = getIntent().getStringExtra("subject");
+        setTitle("Journals : "+subject.substring(2));
         new JournalListActivity.LoadRSSFeedItems().execute(subject);
 
         ListView lv = getListView();
