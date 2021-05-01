@@ -113,7 +113,7 @@ public class RSSFeedActivity extends ListActivity {
 
                     String niceDateStr = null;
                     if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
-                        niceDateStr = (String) DateUtils.getRelativeTimeSpanString(mDate.getTime() , Calendar.getInstance().getTimeInMillis(), DateUtils.MINUTE_IN_MILLIS);
+                        niceDateStr = (String) DateUtils.getRelativeTimeSpanString(mDate.getTime() ,System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS);
                     }
                     SimpleDateFormat sdf2 = new SimpleDateFormat("EEEE, dd MMMM yyyy - hh:mm a", Locale.US);
                     item.pubdate =niceDateStr;// sdf2.format(mDate);

@@ -67,7 +67,7 @@ public class BrowserActivity extends AppCompatActivity {
         webView.setHorizontalScrollBarEnabled(false);
         final String USER_AGENT = "Mozilla/5.0 (Linux; Android 4.1.1; Galaxy Nexus Build/JRO03C) AppleWebKit/535.19 (KHTML, like Gecko) Chrome/18.0.1025.166 Mobile Safari/535.19";
 
-        webView.getSettings().setUserAgentString(USER_AGENT);
+       // webView.getSettings().setUserAgentString(USER_AGENT);
 
         webView.setWebViewClient(new WebViewClient() {
             @Override

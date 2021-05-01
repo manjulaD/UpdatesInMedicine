@@ -1,6 +1,7 @@
 package com.android.updatesInMedicine;
 
 import android.app.Application;
+import android.text.format.DateUtils;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -20,8 +21,13 @@ import org.xml.sax.SAXException;
 import java.io.IOException;
 import java.io.StringReader;
 import java.io.UnsupportedEncodingException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
+import java.util.TimeZone;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -61,7 +67,32 @@ public class RSSParser {
                     String title = this.getValue(e1, TAG_TITLE).replaceAll("<br />", "\n");
                     String link = this.getValue(e1, TAG_LINK);
                     String description = this.getValue(e1, TAG_DESRIPTION).replaceAll("<br />", "\n");
+                    description = description.replaceAll("<(.*?)\\>"," ");//Removes all items in brackets
+                    description = description.replaceAll("<(.*?)\\\n"," ");//Must be undeneath
+                    description = description.replaceFirst("(.*?)\\>", " ");//Removes any connected item to the last bracket
+                    description = description.replaceAll("&nbsp;"," ");
+                    description = description.replaceAll("&amp;"," ");
+
                     String pubdate = this.getValue(e1, TAG_PUB_DATE);
+                    if(pubdate == null || pubdate.isEmpty()){
+                        pubdate = this.getValue(e1, "dc:date");
+                    }
+
+try {
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+    sdf.setTimeZone(TimeZone.getTimeZone("GMT"));
+    Date mDate = sdf.parse(pubdate);
+
+    String niceDateStr = null;
+    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+        niceDateStr = (String) DateUtils.getRelativeTimeSpanString(mDate.getTime(), System.currentTimeMillis(), DateUtils.MINUTE_IN_MILLIS);
+    }
+    // SimpleDateFormat sdf2 = new SimpleDateFormat("EEEE, dd MMMM yyyy - hh:mm a", Locale.US);
+    pubdate = niceDateStr;// sdf2.format(mDate);
+}catch (Exception ex){
+
+}
+
                     String guid = this.getValue(e1, TAG_GUID);
 
                     RSSItem rssItem = new RSSItem(title, link, description, pubdate, guid);
@@ -91,6 +122,9 @@ public class RSSParser {
             HttpEntity httpEntity = httpResponse.getEntity();
             xml = EntityUtils.toString(httpEntity);
             int index=xml.indexOf("<?xml");
+            if(xml.contains("<?xml") && xml.contains("</xml") ){
+                index=-1;
+            }
             if( index <0){
                 index=xml.indexOf("<rss");
             }
