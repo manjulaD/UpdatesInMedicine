@@ -63,7 +63,6 @@ public class SubjectsList extends ListActivity {
             itemList.add("🔴 Critical Care");
             itemList.add("🔴 Dermatology");
             itemList.add("🔴 Emergency Medicine");
-            itemList.add("🔴 Emergency Medicine");
             itemList.add("🔴 Endocrinology & Diabetes");
             itemList.add("🔴 Gastroenterology & Hepatology");
             itemList.add("🔴 Gynecology and Obstetrics");

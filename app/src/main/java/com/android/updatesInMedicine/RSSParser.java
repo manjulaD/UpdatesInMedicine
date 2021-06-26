@@ -131,6 +131,9 @@ try {
             if( index <0){
                 index=xml.indexOf("<rdf");
             }
+            if( index <0){
+                index=xml.indexOf("<feed");
+            }
 
             if(xml.startsWith("<html") || index <0){
 

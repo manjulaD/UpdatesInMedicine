@@ -4,14 +4,14 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.android.updatesInMedicine",
+  "applicationId": "com.newandromo.dev607173.app768495",
   "variantName": "processReleaseResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
-      "versionCode": 1,
-      "versionName": "1.0",
+      "versionCode": 203000,
+      "versionName": "5.3.3",
       "outputFile": "app-release.apk"
     }
   ]
